@@ -44,6 +44,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/user", require("./api/routes/user"));
+app.use("/team", require("./api/routes/team"));
 
 //This function will give a 404 response if an undefined API endpoint is fired
 app.use((req, res, next) => {
