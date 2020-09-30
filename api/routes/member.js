@@ -46,7 +46,7 @@ router.post("/add", checkAuth, async (req, res, next) => {
     }
 
     let filepath =
-      path.dirname(__dirname).replace("\\api", "") +
+      path.dirname(__dirname).replace("\\api", "").replace("/api", "") +
       "/public/uploads/" +
       req.file.filename;
 
