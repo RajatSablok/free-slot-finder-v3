@@ -48,10 +48,10 @@ app.use((req, res, next) => {
 
 app.use("/user", require("./api/routes/user"));
 app.use("/team", require("./api/routes/team"));
+app.use("/timetable", require("./api/routes/timetable"));
 
 //This function will give a 404 response if an undefined API endpoint is fired
 app.use((req, res, next) => {
-  console.log(req.url);
   const error = new Error("Route not found");
   error.status = 404;
   next(error);
