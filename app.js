@@ -25,6 +25,9 @@ mongoose.Promise = global.Promise;
 //Use helmet to prevent common security vulnerabilities
 app.use(helmet());
 
+//Set static folder
+app.use("/uploads", express.static("./public"));
+
 //Use body-parser to parse json body
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
